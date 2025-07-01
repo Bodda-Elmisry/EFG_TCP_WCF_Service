@@ -23,7 +23,7 @@ namespace EFG_TCP_WCF_Service
 
         public void Submit(SubmitOrderDTO submitOrder)
         {
-            throw new NotImplementedException();
+            submitOrderService.SubmitOrder(submitOrder);
         }
 
         public void Submit(IEnumerable<SubmitOrderDTO> submitOrderList)
