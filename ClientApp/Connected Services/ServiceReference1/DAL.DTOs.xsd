@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DAL.DTOs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DAL.DTOs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SubmitOrderDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InstructionId" type="xs:int" />
+      <xs:element minOccurs="0" name="InstructionValue" type="xs:int" />
+      <xs:element minOccurs="0" name="Order" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubmitOrderDTO" nillable="true" type="tns:SubmitOrderDTO" />
+  <xs:complexType name="ArrayOfSubmitOrderDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubmitOrderDTO" nillable="true" type="tns:SubmitOrderDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSubmitOrderDTO" nillable="true" type="tns:ArrayOfSubmitOrderDTO" />
+</xs:schema>
